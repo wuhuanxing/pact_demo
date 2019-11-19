@@ -13,4 +13,4 @@
 ## My Question
 
 1. how to change the location of pact file, I've tried modify the 'pactDirectory' in build.gradle but not works.
-2. why my provider test not work( can't my test )?
+2. why my provider test not work( can't find the test )?

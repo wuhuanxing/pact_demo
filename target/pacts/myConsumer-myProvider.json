@@ -1,0 +1,39 @@
+{
+    "provider": {
+        "name": "myProvider"
+    },
+    "consumer": {
+        "name": "myConsumer"
+    },
+    "interactions": [
+        {
+            "description": "a request to /hello",
+            "request": {
+                "method": "GET",
+                "path": "/hello"
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "body": {
+                    "name": "zhangsan"
+                }
+            },
+            "providerStates": [
+                {
+                    "name": "sayHello"
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "pactSpecification": {
+            "version": "3.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.6.0"
+        }
+    }
+}

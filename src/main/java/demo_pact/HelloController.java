@@ -1,6 +1,7 @@
 package demo_pact;
 
 
+import java.util.Objects;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,8 +13,9 @@ public class HelloController {
     private HelloService helloService;
 
     @GetMapping
-    public HelloBean helloGradle() {
-        System.out.println("=============== sayHello =======");
+    public HelloBean hello() {
+        System.out.println("====> in Controller");
+        System.out.println("helloService in controller:" + helloService.hashCode());
         return helloService.sayHello();
     }
 

@@ -7,6 +7,6 @@ public class HelloService {
 
 
     public HelloBean sayHello(){
-        return new HelloBean("hello boy", "zhansan");
+        return new HelloBean("hello boy", "zhangsan");
     }
 }

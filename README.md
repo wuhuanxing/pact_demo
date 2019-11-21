@@ -10,7 +10,3 @@
    run method runTest() in ProviderTest.java under test folder,
    but it occurs: java.lang.Exception: No tests found matching Method runTest(demo_pact.ProviderTest) 
    
-## My Question
-
-1. how to change the location of pact file, I've tried modify the 'pactDirectory' in build.gradle but not works.
-2. why my provider test not work( can't find the test )?

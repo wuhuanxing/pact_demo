@@ -38,17 +38,37 @@ dependencies {
 }
 
 
+//pact {
+//    publish {
+////        pactDirectory = "$rootDir/Pacts/Miku"
+//        pactDirectory = "$buildDir/pacts"
+////        pactDirectory = "Pacts/Miku"
+//
+////        pactBrokerUrl = mybrokerUrl
+////        pactBrokerUsername = mybrokerUser
+////        pactBrokerPassword = mybrokerPassword
+//
+//        // This is to local Pact Broker in Docker
+////            pactBrokerUrl = "http://localhost"
+//    }
+//}
+
 pact {
-    publish {
-//        pactDirectory = "$rootDir/Pacts/Miku"
-        pactDirectory = "$buildDir/pacts"
-//        pactDirectory = "Pacts/Miku"
-
-//        pactBrokerUrl = mybrokerUrl
-//        pactBrokerUsername = mybrokerUser
-//        pactBrokerPassword = mybrokerPassword
-
-        // This is to local Pact Broker in Docker
-//            pactBrokerUrl = "http://localhost"
+    
+//    publish {
+//        pactDirectory = "$buildDir/pacts"
+//        pactBrokerUrl = "http://localhost"
+//    }
+    
+    serviceProviders {
+        myProvider {
+            protocol ='http'
+            host = 'localhost'
+            port = 8080
+            hasPactWith("myConsumer") {
+//                pactFile = file("$buildDir/aa/pacts/myConsumer-myProvider.json")
+                pactFile = file("$rootDir/target/pacts/myConsumer-myProvider.json")
+            }
+        }
     }
 }
